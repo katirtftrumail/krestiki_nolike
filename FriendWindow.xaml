@@ -1,0 +1,33 @@
+﻿<Window x:Class="crossesXnoughts.FriendWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Крестики-Нолики | Игра с Другом" Height="350" Width="525" MaxHeight="350" MaxWidth="525" MinHeight="350" MinWidth="525" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Height="40" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Click="Button_Click_1">
+            <Image Name="Prev" />
+        </Button>
+        <StackPanel Margin="20 20 20 20" VerticalAlignment="Center">
+            <Label Content="Введите ваши имена" HorizontalContentAlignment="Center" Padding="0 0 0 40" FontSize="22"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Имя первого игрока" Grid.Column="0" FontSize="16"/>
+                <TextBox x:Name="nameOnePlayer" Height="30" TextWrapping="Wrap" Grid.Column="1" FontSize="16"/>
+            </Grid>
+            <Grid Margin="0 20 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Имя второго игрока" Grid.Column="0" FontSize="16"/>
+                <TextBox x:Name="nameTwoPlayer" Height="30" TextWrapping="Wrap" Grid.Column="1" FontSize="16"/>
+            </Grid>
+            <Button Content="Начать игру" Height="49" Width="133" Margin="0 30 0 0" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
